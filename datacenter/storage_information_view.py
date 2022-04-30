@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from datacenter.models import Passcard, Visit, get_format_duration, get_duration
+from datacenter.models import Visit, get_format_duration, get_duration
 
 
 def storage_information_view(request):
@@ -12,7 +12,7 @@ def storage_information_view(request):
             'entered_at': visitor.entered_at,
             'duration': duration,
         })
-        
+
     context = {
         'non_closed_visits': non_closed_visits,
     }
